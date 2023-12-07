@@ -39,7 +39,7 @@
             // label1
             // 
             label1.Font = new Font("Base 05", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 9);
+            label1.Location = new Point(200, 26);
             label1.Name = "label1";
             label1.Size = new Size(850, 55);
             label1.TabIndex = 0;
@@ -47,18 +47,20 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(12, 53);
+            pictureBox1.BackColor = SystemColors.ActiveBorder;
+            pictureBox1.Location = new Point(200, 100);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(780, 336);
+            pictureBox1.Size = new Size(1200, 600);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
             // button1
             // 
             button1.Font = new Font("Base 05", 24F, FontStyle.Bold);
-            button1.Location = new Point(12, 397);
+            button1.Location = new Point(12, 284);
             button1.Name = "button1";
-            button1.Size = new Size(71, 43);
+            button1.Size = new Size(70, 270);
             button1.TabIndex = 2;
             button1.Text = "<";
             button1.UseVisualStyleBackColor = true;
@@ -66,9 +68,9 @@
             // button2
             // 
             button2.Font = new Font("Base 05", 24F, FontStyle.Bold);
-            button2.Location = new Point(721, 397);
+            button2.Location = new Point(1502, 284);
             button2.Name = "button2";
-            button2.Size = new Size(71, 43);
+            button2.Size = new Size(70, 270);
             button2.TabIndex = 3;
             button2.Text = ">";
             button2.UseVisualStyleBackColor = true;
@@ -77,17 +79,18 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Base 05", 24F, FontStyle.Bold);
-            label2.Location = new Point(370, 400);
+            label2.Location = new Point(684, 703);
             label2.Name = "label2";
-            label2.Size = new Size(75, 40);
+            label2.Size = new Size(216, 40);
             label2.TabIndex = 4;
-            label2.Text = "1/8";
+            label2.Text = "NaN / NaN";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(804, 451);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(1584, 861);
             Controls.Add(label2);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -95,6 +98,7 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

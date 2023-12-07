@@ -34,5 +34,17 @@ namespace Tutorial
         {
             InitializeComponent();
         }
+
+        public int Page_count = 1;
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //페이지 카운트가 1일때 버튼1번 비활성화
+            if (Page_count == 1) { button1.Enabled = false; }
+            pictureBox1.Image = Properties.Resources.TTI1;
+            //페이지 제목
+            label1.Text = "메인 화면을 알아보자!";
+            //페이지 수
+            label2.Text = Page_count + " / 8";
+        }
     }
 }
