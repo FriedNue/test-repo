@@ -128,8 +128,10 @@ namespace Tutorial
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("스킵 하시겠습니까?","SKIP",MessageBoxButtons.YesNo);
-            
+            if(MessageBox.Show("스킵 하시겠습니까?", "SKIP", MessageBoxButtons.YesNo)==DialogResult.Yes)
+            {
+                Close();
+            }  
         }
     }
 }
