@@ -46,7 +46,7 @@ namespace Tutorial
             //페이지 수
             label2.Text = Page_count + " / 8";
         }
-        
+
         public void Page_Image()
         {
             // 페이지에 따른 이미지 호출
@@ -100,6 +100,45 @@ namespace Tutorial
             }
 
 
+        }
+        public void Button_Click()
+        {
+            //페이지 카운트가 1일때 버튼1 비활성화
+            if (Page_count == 1) { button1.Enabled = false; }
+            else { button1.Enabled = true; }
+            //페이지 카운트가 8일때 버튼2 비활성화
+            if (Page_count == 8) { button2.Enabled = false; }
+            else { button2.Enabled = true; }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //버튼 클릭시 페이지카운트가 0과 8사이일시
+            //페이지카운트 감소
+            if (Page_count > 0 && Page_count <= 8) { Page_count--; }
+            Button_Click();
+            Page_Image();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            //버튼 클릭시 페이지카운트가 0과 8사이일시
+            //페이지카운트 증가
+            if (Page_count > 0 && Page_count <= 8) { Page_count++; }
+            Button_Click();
+            Page_Image();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //스킵버튼 클릭시 나오는 메시지 박스
+            if(MessageBox.Show("스킵 하시겠습니까?", "SKIP", MessageBoxButtons.YesNo)==DialogResult.Yes)
+            {
+                Close();
+            }  
         }
     }
 }
