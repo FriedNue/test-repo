@@ -46,5 +46,60 @@ namespace Tutorial
             //페이지 수
             label2.Text = Page_count + " / 8";
         }
+        
+        public void Page_Image()
+        {
+            // 페이지에 따른 이미지 호출
+            if (Page_count == 1)
+            {
+                pictureBox1.Image = Properties.Resources.TTI1;
+                label1.Text = "메인 화면을 알아보자!"; // 카드 제목
+                label2.Text = Page_count + " / 8"; // 페이지 수
+            }
+            if (Page_count == 2)
+            {
+                pictureBox1.Image = Properties.Resources.TTI2;
+                label1.Text = "카드를 뽑아보자!";
+                label2.Text = Page_count + " / 8";
+            }
+            if (Page_count == 3)
+            {
+                pictureBox1.Image = Properties.Resources.TTI3;
+                label1.Text = "카드를 배치해보자!";
+                label2.Text = Page_count + " / 8";
+            }
+            if (Page_count == 4)
+            {
+                pictureBox1.Image = Properties.Resources.TTI4;
+                label1.Text = "마법 카드를 사용해보자!";
+                label2.Text = Page_count + " / 8";
+            }
+            if (Page_count == 5)
+            {
+                pictureBox1.Image = Properties.Resources.TTI5;
+                label1.Text = "카드를 버려보자!";
+                label2.Text = Page_count + " / 8";
+            }
+            if (Page_count == 6)
+            {
+                pictureBox1.Image = Properties.Resources.TTI6;
+                label1.Text = "전투에 대해 알아보자(1)!";
+                label2.Text = Page_count + " / 8";
+            }
+            if (Page_count == 7)
+            {
+                pictureBox1.Image = Properties.Resources.TTI7;
+                label1.Text = "전투에 대해 알아보자(2)!";
+                label2.Text = Page_count + " / 8";
+            }
+            if (Page_count == 8)
+            {
+                pictureBox1.Image = Properties.Resources.TTI8;
+                label1.Text = "게임의 최종 목표!";
+                label2.Text = Page_count + " / 8";
+            }
+
+
+        }
     }
 }
