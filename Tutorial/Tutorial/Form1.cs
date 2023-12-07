@@ -101,21 +101,26 @@ namespace Tutorial
 
 
         }
-        public void Button_Click(object sender, EventArgs e)
+        public void Button_Click()
         {
             if (Page_count == 1) { button1.Enabled = false; }
             else { button1.Enabled = true; }
+
             if (Page_count == 8) { button2.Enabled = false; }
             else { button2.Enabled = true; }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (Page_count > 0 && Page_count <= 8) { Page_count--; }
+            Button_Click();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (Page_count > 0 && Page_count <= 8) { Page_count++; }
+            Button_Click();
 
         }
     }
