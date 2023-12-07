@@ -46,7 +46,7 @@ namespace Tutorial
             //페이지 수
             label2.Text = Page_count + " / 8";
         }
-        
+
         public void Page_Image()
         {
             // 페이지에 따른 이미지 호출
@@ -99,6 +99,23 @@ namespace Tutorial
                 label2.Text = Page_count + " / 8";
             }
 
+
+        }
+        public void Button_Click(object sender, EventArgs e)
+        {
+            if (Page_count == 1) { button1.Enabled = false; }
+            else { button1.Enabled = true; }
+            if (Page_count == 8) { button2.Enabled = false; }
+            else { button2.Enabled = true; }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
 
         }
     }
