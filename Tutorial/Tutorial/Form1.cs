@@ -125,5 +125,11 @@ namespace Tutorial
             Page_Image();
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("스킵 하시겠습니까?","SKIP",MessageBoxButtons.YesNo);
+            
+        }
     }
 }

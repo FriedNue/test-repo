@@ -33,6 +33,7 @@
             button1 = new Button();
             button2 = new Button();
             label2 = new Label();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -87,12 +88,24 @@
             label2.TabIndex = 4;
             label2.Text = "NaN / NaN";
             // 
+            // button3
+            // 
+            button3.Font = new Font("Base 05", 24F, FontStyle.Bold);
+            button3.Location = new Point(1233, 706);
+            button3.Name = "button3";
+            button3.Size = new Size(167, 69);
+            button3.TabIndex = 5;
+            button3.Text = "SKIP";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1584, 861);
+            Controls.Add(button3);
             Controls.Add(label2);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -113,5 +126,6 @@
         private Button button1;
         private Button button2;
         private Label label2;
+        private Button button3;
     }
 }
