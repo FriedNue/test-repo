@@ -46,6 +46,8 @@ namespace Tutorial
             label1.Text = "메인 화면을 알아보자!";
             //페이지 수
             label2.Text = Page_count + " / 8";
+            //Form의 크기 조정 모드 설정에 따라 자동 크기조정
+            this.AutoScaleMode = AutoScaleMode.Inherit;
         }
 
         public void Page_Image()
