@@ -112,7 +112,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Tutorial";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

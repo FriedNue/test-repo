@@ -12,6 +12,7 @@ namespace Tutorial
 {
     public partial class Form1 : Form
     {
+        
         struct Tutorial_ImageDB
         {
             public Image Tutorial_Image;
@@ -117,7 +118,20 @@ namespace Tutorial
             //페이지카운트 감소
             if (Page_count > 0 && Page_count <= 8) { Page_count--; }
             Button_Click();
-            Page_Image();
+            Page_Image(); 
+            //예외처리문
+            try
+            {
+                Page_count = 0;
+            }
+            catch
+            {
+                MessageBox.Show("오류 발생", "오류");
+            }
+            finally
+            {
+                Page_count = 1;
+            }
 
         }
 
@@ -129,7 +143,19 @@ namespace Tutorial
             if (Page_count > 0 && Page_count <= 8) { Page_count++; }
             Button_Click();
             Page_Image();
-
+            //예외처리문
+            try
+            {
+                Page_count = 9;
+            }
+            catch
+            {
+                MessageBox.Show("오류 발생", "오류");
+            }
+            finally
+            {
+                Page_count = 8;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -140,5 +166,6 @@ namespace Tutorial
                 Close();
             }  
         }
+        
     }
 }
