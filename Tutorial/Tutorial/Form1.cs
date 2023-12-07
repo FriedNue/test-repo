@@ -114,13 +114,15 @@ namespace Tutorial
         {
             if (Page_count > 0 && Page_count <= 8) { Page_count--; }
             Button_Click();
-            
+            Page_Image();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             if (Page_count > 0 && Page_count <= 8) { Page_count++; }
             Button_Click();
+            Page_Image();
 
         }
     }
